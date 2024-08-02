@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="com.app.importexceldata.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns:u="sap.ui.unified"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="Read From Excel"
+    >
+        <customHeader>
+            <Bar id="headerBar">
+                <contentMiddle>
+                    <Label
+                        id="headerLabel"
+                        text="Read Data From Excel"
+                    />
+                </contentMiddle>
+                <contentRight>
+                    <u:FileUploader
+                        id="FileUploaderId"
+                        sameFilenameAllowed="true"
+                        iconOnly="false"
+                        buttonOnly="true"
+                        fileType="XLSX,xlsx"
+                        icon="sap-icon://upload"
+                        iconFirst="true"
+                        style="Emphasized"
+                        change="onUpload"
+                    />
+                </contentRight>
+            </Bar>
+        </customHeader>
+        <content>
+            <Table id="idDynamicTable">
+            <headerToolbar>
+                    <OverflowToolbar id="idSlotsTableHeader">
+                        <Title
+                            id="idTableHeaderTitle"
+                            
+                        />
+                        <ToolbarSpacer id="idTableHeaderSpacer" />
+                        <Button
+                            id="idBtnUnassign"
+                            type="Success"
+                            press="onAdd"
+                            icon="sap-icon://add"
+                            text="Add"
+                        />
+                        <Button
+                            id="idBtnEdit"
+                            icon="sap-icon://edit"
+                            type="Emphasized"
+                            press="onEdit"
+                            text="Edit"
+                        />
+                        <Button
+                            id="idBtnCreate"
+                            icon="sap-icon://clear-all"
+                            type="Accept"
+                            press="onClear"
+                            text="clear"
+                        />
+                    </OverflowToolbar>
+                </headerToolbar>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
