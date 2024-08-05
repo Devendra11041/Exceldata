@@ -57,6 +57,13 @@
                         />
                         <Button
                             id="idBtnCreate"
+                            icon="sap-icon://save"
+                            type="Neutral"
+                            press="onSave"
+                            text="save"
+                        />
+                        <Button
+                            id="idBtnsave"
                             icon="sap-icon://clear-all"
                             type="Accept"
                             press="onClear"
